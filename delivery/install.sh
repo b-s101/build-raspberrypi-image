@@ -10,7 +10,7 @@ echo "Please check environment variables etc, this script can be executed ONLY w
 #echo "When tasks done, type \"exit\" to return"
 echo ""
 
-cat /usr/src/delivery/auto.install | while read LINE
+cat /usr/src/delivery/auto.execute | while read LINE
 do
 	$LINE
 done

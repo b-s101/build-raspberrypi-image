@@ -3,7 +3,7 @@ Delivery contents
 
 Put all your delivery files, scripts, SQL's to this folder. It will be mounted to the Raspbian environment and you'll access them.
 
-auto.mod
+auto.execute
 ----------------------------------------------------------------------------------------------------
 This file is intended for automating modifications within an image. It is called by install.sh from the delivery-folder and contains
 the command 'bash' only which enables manual modifications as intended by Andrius Kairiukstis. Deleting the 'bash' command
