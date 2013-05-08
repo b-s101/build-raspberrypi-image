@@ -30,8 +30,7 @@
 # you need at least
 # apt-get install binfmt-support qemu qemu-user-static debootstrap kpartx lvm2 dosfstools
 
-deb_mirror="http://http.us.debian.org/debian"
-#deb_local_mirror="http://debian.kmp.or.at:3142/debian"
+deb_mirror="http://debian.tu-bs.de/debian"
 
 bootsize="64M"
 deb_release="wheezy"
