@@ -158,7 +158,7 @@ chmod +x /usr/bin/rpi-update
 mkdir -p /lib/modules/3.1.9+
 touch /boot/start.elf
 rpi-update
-apt-get -y install locales console-common ntp openssh-server less vim
+apt-get -y install locales console-common ntp openssh-server less vim nano
 echo "execute all necessary commands, then type exit"
 bash
 echo \"root:raspberry\" | chpasswd
