@@ -213,7 +213,7 @@ mkdir -p /lib/modules/3.1.9+
 touch /boot/start.elf
 rpi-update
 
-apt-get -y install locales console-common ntp openssh-server less vim
+apt-get -y install locales console-common ntp openssh-server less vim nano
 
 # execute install script at mounted external media (delivery contents folder)
 cd /usr/src/delivery
