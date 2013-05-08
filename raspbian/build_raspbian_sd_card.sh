@@ -214,13 +214,14 @@ touch /boot/start.elf
 rpi-update
 
 apt-get -y install locales console-common ntp openssh-server less vim nano
+echo \"root:raspberry\" | chpasswd
 
 # execute install script at mounted external media (delivery contents folder)
 cd /usr/src/delivery
 ./install.sh
 cd
 
-echo \"root:raspberry\" | chpasswd
+
 sed -i -e 's/KERNEL\!=\"eth\*|/KERNEL\!=\"/' /lib/udev/rules.d/75-persistent-net-generator.rules
 rm -f /etc/udev/rules.d/70-persistent-net.rules
 rm -f third-stage
