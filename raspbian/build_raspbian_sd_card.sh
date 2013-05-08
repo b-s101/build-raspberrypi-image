@@ -168,7 +168,7 @@ mount -o bind ${delivery_path} ${rootfs}/usr/src/delivery
 
 cd ${rootfs}
 
-debootstrap --foreign --arch armhf ${deb_release} ${rootfs} ${deb_local_mirror}
+debootstrap --foreign --no-check-gpg --arch armhf ${deb_release} ${rootfs} ${deb_local_mirror}
 cp /usr/bin/qemu-arm-static usr/bin/
 LANG=C chroot ${rootfs} /debootstrap/debootstrap --second-stage
 
