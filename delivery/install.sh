@@ -7,10 +7,8 @@ if [ "${machine}" != "armv7l" ]; then
 fi
 
 echo "Please check environment variables etc, this script can be executed ONLY within RPI environment!"
-#echo "When tasks done, type \"exit\" to return"
+echo "When tasks done, type \"exit\" to return"
 echo ""
 
-cat /usr/src/delivery/auto.mod | while read LINE
-do
-	$LINE
-done
+bash
+
