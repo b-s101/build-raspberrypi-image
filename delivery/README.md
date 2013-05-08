@@ -12,9 +12,10 @@ and adding your own commands may result in automating the whole modification pro
 If this file exists it will be parsed for bash commands line by line.
 This means the file must be either empty or contain a linefeed-separated list of commands to execute.
 
-Example:
-	dpkg-reconfigure tzdata
-	dpkg-reconfigure locales
-	apt-get remove x11-common midori lxde --purge
+###Example:
+
+dpkg-reconfigure tzdata
+dpkg-reconfigure locales
+apt-get remove x11-common midori lxde --purge
 
 The file must be readable (chmod 644).
