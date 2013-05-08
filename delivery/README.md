@@ -15,7 +15,10 @@ This means the file must be either empty or contain a linefeed-separated list of
 ###Example:
 
 dpkg-reconfigure tzdata
+
 dpkg-reconfigure locales
+
 apt-get remove x11-common midori lxde --purge
+
 
 The file must be readable (chmod 644).
