@@ -16,8 +16,8 @@ Original script was created to burn Debian Wheezy, my target is Raspbian, which 
 Milestones of this project
 ---------------------------------------------------------
 - [x] Add script to create minimal Raspbian image
-- [ ] Be able to deploy images (add individual hostname and root password, OpenVPN client settings)
 - [x] Add image mount / unmount script with cross-compilation environment for mounted system
+- [ ] Be able to deploy images (add individual hostname and root password)
 
 Instructions
 ---------------------------------------------------------
