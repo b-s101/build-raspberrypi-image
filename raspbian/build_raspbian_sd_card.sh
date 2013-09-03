@@ -206,7 +206,9 @@ rm -f /debconf.set
 
 cd /usr/src/delivery
 apt-get update
-apt-get -y install git-core binutils ca-certificates
+apt-get -y install git-core binutils ca-certificates lua5.1 triggerhappy whiptail parted 
+wget --continue https://raw.github.com/asb/raspi-config/master/raspi-config -O /usr/bin/raspi-config
+chmod +x /usr/bin/raspi-config
 wget --continue https://raw.github.com/Hexxeh/rpi-update/master/rpi-update -O /usr/bin/rpi-update
 chmod +x /usr/bin/rpi-update
 mkdir -p /lib/modules/3.1.9+
@@ -214,6 +216,7 @@ touch /boot/start.elf
 rpi-update
 
 apt-get -y install locales console-common ntp openssh-server less vim nano
+
 echo \"root:raspberry\" | chpasswd
 
 # execute install script at mounted external media (delivery contents folder)
