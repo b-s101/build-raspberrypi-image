@@ -24,13 +24,13 @@ Instructions
 It is possible to prepare environment on almost every Linux, where chroot, QEMU and debootstrap exists.
 I strictly recommend to install apt-cacher-ng (apt-get install apt-cacher-ng), that caches all downloaded deb packages and lets you to use deb_local_mirror, what's extreamely useful for further experiments, system won't download packages from internet anymore! [Read more about apt-cacher-ng] (https://www.unix-ag.uni-kl.de/~bloch/acng/html/config-servquick.html#config-client)
 
-Install minimal set of packages:
-./install.sh
+1. run install.sh to install the required applications
 
-Run build_raspbian_sd_card.sh script, do burn your SD card
+2. Run build_raspbian_sd_card.sh script, to write diretly to your SD card:
 
 	./build_raspbian_sd_card.sh /dev/sdX
 
-OR to create IMG file (you'll find it under /tmp/rpi folder)
+OR to create IMG file
 
 	./build_raspbian_sd_card.sh
+The resulting image will be placed in a folder named rpi within your build environment.
