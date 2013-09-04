@@ -33,4 +33,5 @@ I strictly recommend to install apt-cacher-ng (apt-get install apt-cacher-ng), t
 OR to create IMG file
 
 	./build_raspbian_sd_card.sh
+
 The resulting image will be placed in a folder named rpi within your build environment.
