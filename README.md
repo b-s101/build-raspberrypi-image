@@ -17,7 +17,6 @@ Milestones of this project
 ---------------------------------------------------------
 - [x] Add script to create minimal Raspbian image
 - [x] Add image mount / unmount script with cross-compilation environment for mounted system
-- [ ] Be able to deploy images (add individual hostname and root password)
 
 Instructions
 ---------------------------------------------------------
