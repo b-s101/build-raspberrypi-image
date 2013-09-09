@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ "`uname -m`" <> "armv6l" ]; then
+if [ "`uname -m`" <> "armv7l" ]; then
   echo "This script will be executed at mounted raspbian enviroment"
   exit 1
 fi
