@@ -1,8 +1,8 @@
 #!/bin/sh
 
 machine=`uname -m`
-if [ "${machine}" != "armv6l" ]; then
-  echo "This script will be executed at mounted raspbian enviroment (armv6l). Current environment is ${machine}."
+if [ "${machine}" != "armv7l" ]; then
+  echo "This script will be executed at mounted raspbian enviroment (armv7l). Current environment is ${machine}."
   exit 1
 fi
 
