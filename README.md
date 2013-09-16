@@ -1,4 +1,4 @@
-Build Raspbian Image
+Build Raspberry Pi Image
 =========================================================
 
 Build (and cross-compile) your own image for Raspberry Pi
@@ -12,11 +12,8 @@ About initial code
 ---------------------------------------------------------
 
 Original script was created to burn Debian Wheezy, my target is Raspbian, which is better for Raspberry Pi. You can read more about Raspbian (and its difference from stock Debian) at project page: http://raspbian.org
+Anyways... it is possible to create pure Debian Wheezy images as well.
 
-Milestones of this project
----------------------------------------------------------
-- [x] Add script to create minimal Raspbian image
-- [x] Add image mount / unmount script with cross-compilation environment for mounted system
 
 Instructions
 ---------------------------------------------------------
@@ -28,10 +25,10 @@ I strictly recommend to install apt-cacher-ng (apt-get install apt-cacher-ng), t
 
 2. Run build_raspbian_sd_card.sh script, to write diretly to your SD card:
 
-	./build_raspbian_sd_card.sh /dev/sdX
+./build_raspbian_sd_card.sh /dev/sdX
 
 OR to create IMG file
 
-	./build_raspbian_sd_card.sh
+./build_raspbian_sd_card.sh
 
 The resulting image will be placed in a folder named rpi within your build environment.
