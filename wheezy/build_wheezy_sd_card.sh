@@ -1,7 +1,8 @@
 #!/bin/bash
 
-deb_mirror="http://archive.raspbian.org/raspbian"
-deb_local_mirror="http://localhost:3142/archive.raspbian.org/raspbian"
+deb_mirror="http://debian.tu-bs.de/debian"
+deb_local_mirror="http://localhost:3142/debian.tu-bs.de/debian"
+
 
 if [ ${EUID} -ne 0 ]; then
   echo "this tool must be run as root"
@@ -21,6 +22,7 @@ fi
 bootsize="64M"
 deb_release="wheezy"
 rpi_release="raspbian"
+
 
 relative_path=`dirname $0`
 
@@ -46,7 +48,7 @@ image=""
 if [ "${device}" == "" ]; then
   echo "no block device given, just creating an image"
   mkdir -p ${buildenv}
-  image="${buildenv}/rpi_de_${rpi_release}_${today}.img"
+  image="${buildenv}/rpi_de_${deb_release}_${today}.img"
   dd if=/dev/zero of=${image} bs=1MB count=512
   device=`losetup -f --show ${image}`
   echo "image ${image} created and mounted as ${device}"
@@ -112,7 +114,7 @@ mount -o bind ${delivery_path} ${rootfs}/usr/src/delivery
 
 cd ${rootfs}
 
-debootstrap --foreign --no-check-gpg --arch armhf ${deb_release} ${rootfs} ${deb_local_mirror}
+debootstrap --foreign --no-check-gpg --arch armel ${deb_release} ${rootfs} ${deb_local_mirror}
 cp /usr/bin/qemu-arm-static usr/bin/
 LANG=C chroot ${rootfs} /debootstrap/debootstrap --second-stage
 
