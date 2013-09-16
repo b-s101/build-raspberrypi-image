@@ -49,7 +49,7 @@ if [ "${device}" == "" ]; then
   echo "no block device given, just creating an image"
   mkdir -p ${buildenv}
   image="${buildenv}/rpi_de_${deb_release}_${today}.img"
-  dd if=/dev/zero of=${image} bs=1MB count=512
+  dd if=/dev/zero of=${image} bs=1MB count=1024
   device=`losetup -f --show ${image}`
   echo "image ${image} created and mounted as ${device}"
 else
