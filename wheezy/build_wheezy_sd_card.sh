@@ -21,7 +21,7 @@ fi
 
 bootsize="64M"
 deb_release="wheezy"
-rpi_release="raspbian"
+rpi_release="debian"
 
 
 relative_path=`dirname $0`
@@ -48,7 +48,7 @@ image=""
 if [ "${device}" == "" ]; then
   echo "no block device given, just creating an image"
   mkdir -p ${buildenv}
-  image="${buildenv}/rpi_de_${deb_release}_${today}.img"
+  image="${buildenv}/rpi_de_${rpi_release}_${deb_release}_${today}.img"
   dd if=/dev/zero of=${image} bs=1MB count=1024
   device=`losetup -f --show ${image}`
   echo "image ${image} created and mounted as ${device}"
