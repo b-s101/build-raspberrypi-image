@@ -42,11 +42,12 @@ then
 	rm /mnt/usr/bin/qemu-arm-static
 	rm /mnt/etc/resolv.conf
 	cp /mnt/etc/resolv.conf.org /mnt/etc/resolv.conf
-	umount /mnt/dev
-	umount /mnt/proc
-	umount /mnt/sys
+	umount -l /mnt/dev
+	umount -l /mnt/proc
+	umount -l /mnt/sys
 	umount /mnt
 	kpartx -d $2
+	dmsetup remove_all
 else
 	echo "Something went wrong with your parameters."
 	echo "Usage: ./mod.sh options imagfile"
