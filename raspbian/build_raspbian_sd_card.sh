@@ -193,6 +193,8 @@ cd ${rootfs}
 sync
 sleep 15
 
+cd
+
 umount -l ${bootp}
 
 umount -l ${rootfs}/usr/src/delivery
@@ -203,6 +205,8 @@ umount -l ${rootfs}/proc
 
 umount -l ${rootfs}
 umount -l ${rootp}
+
+dmsetup remove_all
 
 echo "finishing ${image}"
 
