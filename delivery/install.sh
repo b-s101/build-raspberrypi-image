@@ -10,7 +10,10 @@ echo "Please check environment variables etc, this script can be executed ONLY w
 #echo "When tasks done, type \"exit\" to return"
 echo ""
 
+echo "executing auto.execute"
 cat /usr/src/delivery/auto.execute | while read LINE
 do
 	$LINE
 done
+echo "copying rcopy content"
+cp -r /usr/src/delivery/rcopy/* /
