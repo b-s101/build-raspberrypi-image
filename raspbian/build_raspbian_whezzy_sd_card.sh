@@ -163,6 +163,12 @@ apt-get -y install locales console-common ntp openssh-server less vim nano
 
 echo \"root:raspberry\" | chpasswd
 
+echo "de_DE ISO-8859-1" >> /etc/locale.gen
+locale-gen
+echo 'LANG="de_DE"' >> /etc/default/locale
+
+echo "alias ls='ls --color=auto'" >> /etc/bash.bashrc
+
 # execute install script at mounted external media (delivery contents folder)
 cd /usr/src/delivery
 ./install.sh
@@ -171,7 +177,7 @@ cd
 
 sed -i -e 's/KERNEL\!=\"eth\*|/KERNEL\!=\"/' /lib/udev/rules.d/75-persistent-net-generator.rules
 rm -f /etc/udev/rules.d/70-persistent-net.rules
-rm -f third-stage
+rm -f /third-stage
 " > third-stage
 chmod +x third-stage
 LANG=C chroot ${rootfs} /third-stage
