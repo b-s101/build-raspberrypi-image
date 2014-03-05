@@ -4,6 +4,7 @@ delivery/*
 !delivery/install.sh
 !delivery/update.sh
 !delivery/auto.execute
+!delivery/rcopy
 rpi/*/*
 rpi/*
 rpi
